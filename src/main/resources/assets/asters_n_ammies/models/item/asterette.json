@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-    "textures": {
-        "layer0": "asters_n_ammies:item/asterette"
-    }
-}

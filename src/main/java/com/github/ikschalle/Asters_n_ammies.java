@@ -1,27 +1,24 @@
 package com.github.ikschalle;
 
+import com.github.ikschalle.block.CoinPile;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -38,41 +35,49 @@ public class Asters_n_ammies {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    public static final RegistryObject<Item> ASTER = ITEMS.register("aster", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> ASTERETTE = ITEMS.register("asterette", () -> new Item(new Item.Properties()));
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+
+    public static final RegistryObject<Block> ASTER_BLOCK = BLOCKS.register("aster", () -> new CoinPile(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.DIAMOND)
+            .strength(1.0F, 8.0F)
+            .requiresCorrectToolForDrops()
+            .pushReaction(PushReaction.DESTROY)
+            .sound(SoundType.CHAIN)
+    ));
+    public static final RegistryObject<Block> ASTERETTE_BLOCK = BLOCKS.register("asterette", () -> new CoinPile(BlockBehaviour.Properties.copy(ASTER_BLOCK.get())
+            .mapColor(MapColor.COLOR_PURPLE)
+    ));
+
+    public static final RegistryObject<Item> ASTER_ITEM = ITEMS.register("aster", () -> new BlockItem(ASTER_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> ASTERETTE_ITEM = ITEMS.register("asterette", () -> new BlockItem(ASTERETTE_BLOCK.get(), new Item.Properties()));
 
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final RegistryObject<CreativeModeTab> ASTERS_N_AMMIES = CREATIVE_MODE_TABS.register("asters_n_ammies", () ->
             CreativeModeTab.builder().withTabsBefore(CreativeModeTabs.COMBAT)
                     .title(Component.translatable("item_group." + MODID + ".asters_n_ammies"))
-                    .icon(() -> ASTER.get().getDefaultInstance())
+                    .icon(() -> ASTER_ITEM.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
-                    output.accept(ASTER.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-                    output.accept(ASTERETTE.get());
+                    output.accept(ASTER_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                    output.accept(ASTERETTE_ITEM.get());
                     }).build());
 
+
     public Asters_n_ammies() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        @SuppressWarnings("all") IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
-        //BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
+        BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
-
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-
+        // MinecraftForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
-        //modEventBus.addListener(this::addCreative);
+        // modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-        //ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        // ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -94,7 +99,7 @@ public class Asters_n_ammies {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
-        LOGGER.info("Edward Ordaineth Thy Worldly Currency.");
+        LOGGER.info("Edward Ordaineth Thy Worldly Currency. Edward Taketh Thy Worldly Sins.");
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
