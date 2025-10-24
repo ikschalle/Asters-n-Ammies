@@ -1,0 +1,24 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "asters_n_ammies:block/aster",
+		"particle": "asters_n_ammies:block/aster"
+	},
+	"elements": [
+		{
+			"name": "coin",
+			"from": [8.251, 0.001, 8.251],
+			"to": [15.749, 3.999, 15.749],
+			"rotation": {"angle": 0, "axis": "y", "origin": [12, 2, 12]},
+			"faces": {
+				"north": {"uv": [8, 0, 16, 4], "texture": "#1"},
+				"east": {"uv": [8, 0, 16, 4], "texture": "#1"},
+				"south": {"uv": [8, 0, 16, 4], "texture": "#1"},
+				"west": {"uv": [8, 0, 16, 4], "texture": "#1"},
+				"up": {"uv": [8, 8, 0, 0], "rotation": 270, "texture": "#1"},
+				"down": {"uv": [8, 0, 0, 8], "rotation": 90, "texture": "#1"}
+			}
+		}
+	]
+}

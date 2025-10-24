@@ -1,0 +1,332 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "1"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "2"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 2.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "3"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 3.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "4"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 4.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "5"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 5.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "6"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 6.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "7"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 7.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "8"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 8.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "9"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 9.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "10"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 10.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "11"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 11.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "12"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 12.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "13"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 13.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "14"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 14.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "15"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 15.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "asters_n_ammies:aster",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "coins": "16"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "add": false,
+              "count": 16.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "asters_n_ammies:aster"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "asters_n_ammies:blocks/aster"
+}

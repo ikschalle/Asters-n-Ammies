@@ -16,7 +16,10 @@ classes/
 .metadata
 .cs_data
 .vscode
+.bbmodel
 .settings
 *.launch.DS_Store
 .DS_Store
 .architectury-transformer/
+/run-data
+/src/generated/resources/.cache

@@ -1,0 +1,100 @@
+{
+  "variants": {
+    "coins=1": [
+      { "model": "asters_n_ammies:block/aster_pile_1" },
+      { "model": "asters_n_ammies:block/aster_pile_1", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_1", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_1", "y": 270 }
+    ],
+    "coins=2": [
+      { "model": "asters_n_ammies:block/aster_pile_2" },
+      { "model": "asters_n_ammies:block/aster_pile_2", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_2", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_2", "y": 270 }
+    ],
+    "coins=3": [
+      { "model": "asters_n_ammies:block/aster_pile_3" },
+      { "model": "asters_n_ammies:block/aster_pile_3", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_3", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_3", "y": 270 }
+    ],
+    "coins=4": [
+      { "model": "asters_n_ammies:block/aster_pile_4" },
+      { "model": "asters_n_ammies:block/aster_pile_4", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_4", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_4", "y": 270 }
+    ],
+    "coins=5": [
+      { "model": "asters_n_ammies:block/aster_pile_5" },
+      { "model": "asters_n_ammies:block/aster_pile_5", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_5", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_5", "y": 270 }
+    ],
+    "coins=6": [
+      { "model": "asters_n_ammies:block/aster_pile_6" },
+      { "model": "asters_n_ammies:block/aster_pile_6", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_6", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_6", "y": 270 }
+    ],
+    "coins=7": [
+      { "model": "asters_n_ammies:block/aster_pile_7" },
+      { "model": "asters_n_ammies:block/aster_pile_7", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_7", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_7", "y": 270 }
+    ],
+    "coins=8": [
+      { "model": "asters_n_ammies:block/aster_pile_8" },
+      { "model": "asters_n_ammies:block/aster_pile_8", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_8", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_8", "y": 270 }
+    ],
+    "coins=9": [
+      { "model": "asters_n_ammies:block/aster_pile_9" },
+      { "model": "asters_n_ammies:block/aster_pile_9", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_9", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_9", "y": 270 }
+    ],
+    "coins=10": [
+      { "model": "asters_n_ammies:block/aster_pile_10" },
+      { "model": "asters_n_ammies:block/aster_pile_10", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_10", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_10", "y": 270 }
+    ],
+    "coins=11": [
+      { "model": "asters_n_ammies:block/aster_pile_11" },
+      { "model": "asters_n_ammies:block/aster_pile_11", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_11", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_11", "y": 270 }
+    ],
+    "coins=12": [
+      { "model": "asters_n_ammies:block/aster_pile_12" },
+      { "model": "asters_n_ammies:block/aster_pile_12", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_12", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_12", "y": 270 }
+    ],
+    "coins=13": [
+      { "model": "asters_n_ammies:block/aster_pile_13" },
+      { "model": "asters_n_ammies:block/aster_pile_13", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_13", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_13", "y": 270 }
+    ],
+    "coins=14": [
+      { "model": "asters_n_ammies:block/aster_pile_14" },
+      { "model": "asters_n_ammies:block/aster_pile_14", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_14", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_14", "y": 270 }
+    ],
+    "coins=15": [
+      { "model": "asters_n_ammies:block/aster_pile_15" },
+      { "model": "asters_n_ammies:block/aster_pile_15", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_15", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_15", "y": 270 }
+    ],
+    "coins=16": [
+      { "model": "asters_n_ammies:block/aster_pile_16" },
+      { "model": "asters_n_ammies:block/aster_pile_16", "y": 90 },
+      { "model": "asters_n_ammies:block/aster_pile_16", "y": 180 },
+      { "model": "asters_n_ammies:block/aster_pile_16", "y": 270 }
+    ]
+  }
+}
