@@ -16,6 +16,7 @@ classes/
 .metadata
 .cs_data
 .vscode
+.bbmodel
 .settings
 *.launch.DS_Store
 .DS_Store
