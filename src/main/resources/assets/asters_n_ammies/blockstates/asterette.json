@@ -1,0 +1,52 @@
+{
+  "variants": {
+    "coins=1": {
+      "model": "asters_n_ammies:block/asterette_pile_1"
+    },
+    "coins=2": {
+      "model": "asters_n_ammies:block/asterette_pile_2"
+    },
+    "coins=3": {
+      "model": "asters_n_ammies:block/asterette_pile_3"
+    },
+    "coins=4": {
+      "model": "asters_n_ammies:block/asterette_pile_4"
+    },
+    "coins=5": {
+      "model": "asters_n_ammies:block/asterette_pile_5"
+    },
+    "coins=6": {
+      "model": "asters_n_ammies:block/asterette_pile_6"
+    },
+    "coins=7": {
+      "model": "asters_n_ammies:block/asterette_pile_7"
+    },
+    "coins=8": {
+      "model": "asters_n_ammies:block/asterette_pile_8"
+    },
+    "coins=9": {
+      "model": "asters_n_ammies:block/asterette_pile_9"
+    },
+    "coins=10": {
+      "model": "asters_n_ammies:block/asterette_pile_10"
+    },
+    "coins=11": {
+      "model": "asters_n_ammies:block/asterette_pile_11"
+    },
+    "coins=12": {
+      "model": "asters_n_ammies:block/asterette_pile_12"
+    },
+    "coins=13": {
+      "model": "asters_n_ammies:block/asterette_pile_13"
+    },
+    "coins=14": {
+      "model": "asters_n_ammies:block/asterette_pile_14"
+    },
+    "coins=15": {
+      "model": "asters_n_ammies:block/asterette_pile_15"
+    },
+    "coins=16": {
+      "model": "asters_n_ammies:block/asterette_pile_16"
+    }
+  }
+}

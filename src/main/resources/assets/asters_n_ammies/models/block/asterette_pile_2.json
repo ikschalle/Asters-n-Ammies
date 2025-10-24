@@ -2,7 +2,8 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "asters_n_ammies:block/aster"
+		"1": "asters_n_ammies:block/asterette",
+		"particle": "asters_n_ammies:block/asterette"
 	},
 	"elements": [
 		{
