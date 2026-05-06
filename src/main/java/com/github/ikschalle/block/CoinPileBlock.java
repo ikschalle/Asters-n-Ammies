@@ -10,12 +10,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.level.pathfinder.PathComputationType;
-import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -23,11 +20,11 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-public class CoinPile extends Block implements SimpleWaterloggedBlock {
+public class CoinPileBlock extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final IntegerProperty COINS = IntegerProperty.create("coins", 1,16);
 
-    public CoinPile(Properties properties){
+    public CoinPileBlock(Properties properties){
         super(properties);
         this.registerDefaultState(this.defaultBlockState()
                 .setValue(COINS, 1)
@@ -40,7 +37,7 @@ public class CoinPile extends Block implements SimpleWaterloggedBlock {
     }
 
     @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext context) { // On place w/ context
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState blockstate = context.getLevel().getBlockState(context.getClickedPos());
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
         if (blockstate.is(this)) {
@@ -74,13 +71,12 @@ public class CoinPile extends Block implements SimpleWaterloggedBlock {
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
 
-    public boolean isPathfindable(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, PathComputationType pathComputationType) {
-        return false;
-    }
-
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED, COINS);
+        builder.add(
+                WATERLOGGED,
+                COINS
+        );
     }
 
 }
