@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "asters_n_ammies:asterette"
+    },
+    "B": {
+      "item": "minecraft:pink_terracotta"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "asters_n_ammies:hungering_hog"
+  }
+}

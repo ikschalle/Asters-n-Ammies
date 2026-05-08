@@ -66,7 +66,6 @@ public class CoinPileBlock extends Block implements SimpleWaterloggedBlock {
         }
     }
 
-
     public FluidState getFluidState(BlockState blockState) {
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }
