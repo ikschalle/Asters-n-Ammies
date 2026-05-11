@@ -5,7 +5,6 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.dispenser.DefaultDispenseItemBehavior;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -32,6 +31,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nullable;
 
 public class HungeringHogBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+    public final int ASTERETTE_RATIO = 64;
+    public final int ASTER_RATIO = 1;
     public static final MapCodec<HungeringHogBlock> CODEC = simpleCodec(HungeringHogBlock::new);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final VoxelShape X_AXIS_AABB = Block.box(
@@ -84,21 +85,19 @@ public class HungeringHogBlock extends HorizontalDirectionalBlock implements Sim
         Item aster = Asters_n_Ammies.ASTER_ITEM.asItem();
         Item asterette = Asters_n_Ammies.ASTERETTE_ITEM.asItem();
         int held_quantity = stack.getCount();
-        int asterette_ratio = 64;
-        int aster_ratio = 1;
 
         if (item == aster) {
-            tryConvert(held_quantity,aster_ratio, asterette_ratio, asterette, stack, player, level, pos);
+            tryConvert(held_quantity,ASTER_RATIO, ASTERETTE_RATIO, asterette, stack, player, level, pos);
             return ItemInteractionResult.sidedSuccess(level.isClientSide);
         } else if (item == asterette) {
-            tryConvert(held_quantity,asterette_ratio, aster_ratio, aster, stack, player, level, pos);
+            tryConvert(held_quantity,ASTERETTE_RATIO, ASTER_RATIO, aster, stack, player, level, pos);
             return ItemInteractionResult.sidedSuccess(level.isClientSide);
         }
 
         return ItemInteractionResult.CONSUME;
     }
 
-    private void tryConvert(int held_quantity, int ratio_from, int ratio_to, Item item, ItemStack stack, Player player, Level level, BlockPos pos) {
+    static void tryConvert(int held_quantity, int ratio_from, int ratio_to, Item item, ItemStack stack, Player player, Level level, BlockPos pos) {
         if (held_quantity < ratio_from) {
             playSound(level, pos, SoundEvents.PIG_AMBIENT);
             return;
