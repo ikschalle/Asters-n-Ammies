@@ -1,6 +1,6 @@
 package com.github.ikschalle.block;
 
-import com.github.ikschalle.Asters_n_Ammies;
+import com.github.ikschalle.AstersNAmmies;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -82,8 +82,8 @@ public class HungeringHogBlock extends HorizontalDirectionalBlock implements Sim
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
         Item item = stack.getItem();
-        Item aster = Asters_n_Ammies.ASTER_ITEM.asItem();
-        Item asterette = Asters_n_Ammies.ASTERETTE_ITEM.asItem();
+        Item aster = AstersNAmmies.ASTER_ITEM.asItem();
+        Item asterette = AstersNAmmies.ASTERETTE_ITEM.asItem();
         int held_quantity = stack.getCount();
 
         if (item == aster) {

@@ -30,8 +30,8 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(Asters_n_Ammies.MODID)
-public class Asters_n_Ammies {
+@Mod(AstersNAmmies.MODID)
+public class AstersNAmmies {
     public static final String MODID = "asters_n_ammies";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
@@ -79,7 +79,7 @@ public class Asters_n_Ammies {
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public Asters_n_Ammies(IEventBus modEventBus, ModContainer modContainer) {
+    public AstersNAmmies(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
